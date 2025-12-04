@@ -1,0 +1,136 @@
+/* Hide scrollbar on body */
+body {
+  overflow: hidden;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #1a1a1a; /* Curved border - outer container */
+  border-radius: 32px;
+  margin: 1.5rem;
+  margin-left: 0;
+  padding: 3rem 4rem;
+  min-height: calc(100vh - 3rem);
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto; /* Only main content scrolls */
+  overflow-x: hidden;
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.content-grid {
+  display: flex;
+  flex: row;
+}
+
+/* Custom scrollbar for main-content */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Two column wrapper */
+.content-wrapper-two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.left-content {
+  width: 100%;
+  background-color: #2a2a2a; /* Curved border - left content */
+  border-radius: 32px;
+  padding: 3.5rem;
+}
+
+.right-content {
+  width: 100%;
+  position: sticky;
+  top: 2rem;
+}
+
+/* Hero Section Container */
+.hero-section {
+  background-color: transparent;
+  padding: 0;
+  min-height: auto;
+}
+
+/* Profile Card Styling */
+.profile-card-container {
+  width: 35%;
+  margin-left: 5rem;
+}
+
+.profile-main-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #1a1a1a;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.profile-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-tags {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding: 0 0.5rem;
+}
+
+.image-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.65rem;
+  color: #aaaaaa;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .content-wrapper-two-col {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .right-content {
+    position: relative;
+    top: 0;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+}
