@@ -1,6 +1,6 @@
 import React from "react";
 import PfCard from "../Images/MumbaiUniversity.jpeg";
-import "./sections.css";
+import "./Sections.css";
 
 const Studies = () => {
   return (

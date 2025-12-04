@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import img from "../Images/payment-gateway.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import "./sections.css";
+import "./Sections.css";
 
 const Projects = () => {
   const [currentIndex, SetCurrentIndex] = useState(0);
