@@ -10,7 +10,7 @@ const MainContent = ({ activeNav }) => {
       <div className="main-content">
         <div className="content-grid">
           <HeroSection activeNav={activeNav} />
-          {activeNav === "home" && <ProjectCard />}
+          {/* {activeNav === "home" && <ProjectCard />} */}
         </div>
       </div>
     </div>

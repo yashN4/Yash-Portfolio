@@ -2,6 +2,8 @@
 .home-content {
   width: 100%;
   padding: 2rem 0;
+  display: flex;
+  flex: row;
 }
 
 .home-text-section {
@@ -94,7 +96,7 @@
 /* Education, Experience, Resume sections */
 .section-content {
   width: 100%;
-  max-width: none; /* previously 900px — allow it to expand */
+  max-width: none;
   padding: 2rem;
   box-sizing: border-box;
 }
@@ -219,26 +221,7 @@
   box-shadow: 0 8px 28px rgba(255, 255, 255, 0.3);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .main-hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-intro {
-    font-size: 1.1rem;
-  }
-
-  .companies-logos {
-    gap: 2rem;
-  }
-}
-/*  */
-/*  */
-/*  */
-/*  */
 /* Education Split Layout */
-
 .education-layout {
   width: 100%;
   padding: 2rem 0;
@@ -395,51 +378,14 @@
   gap: 1.5rem;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .education-split {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .education-heading {
-    font-size: 2.2rem;
-  }
-
-  .education-info-section {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .education-heading {
-    font-size: 1.8rem;
-  }
-
-  .education-para {
-    font-size: 0.95rem;
-  }
-
-  .education-buttons {
-    flex-direction: column;
-  }
-
-  .edu-btn-primary,
-  .edu-btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-/* experience  */
 /* Experience Page Styles */
 .experience-layout {
   padding: 0;
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  max-width: none; /* allow full width */
-  margin: 0 auto; /* optional centering removed by max-width none */
+  max-width: none;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -450,7 +396,7 @@
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  flex-shrink: 0; /* Prevent header from shrinking */
+  flex-shrink: 0;
 }
 
 .header-left {
@@ -461,7 +407,6 @@
   display: inline-block;
   font-size: 0.7rem;
   letter-spacing: 2px;
-  /* color: #666666; */
   color: #00ff00;
   font-weight: 600;
   text-transform: uppercase;
@@ -514,7 +459,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  flex: 1; /* Take remaining space */
+  flex: 1;
 }
 
 /* Experience Card */
@@ -611,51 +556,7 @@
   color: #d0d0d0;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .experience-header {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .experience-title {
-    font-size: 2.5rem;
-  }
-
-  .resume-link-btn {
-    align-self: flex-start;
-  }
-
-  .experience-card-header {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .duration-info {
-    text-align: left;
-  }
-}
-
-@media (max-width: 768px) {
-  .experience-title {
-    font-size: 2rem;
-  }
-
-  .experience-card {
-    padding: 1.5rem;
-  }
-
-  .company-name {
-    font-size: 1.4rem;
-  }
-
-  .responsibilities-list li {
-    font-size: 0.9rem;
-  }
-}
-
 /* Projects Page Styles */
-/* Projects Page Styles - Compact Version */
 .projects-layout {
   padding: 0;
   min-height: 100%;
@@ -676,7 +577,7 @@
 }
 
 .projects-title {
-  font-size: 2.8rem; /* smaller title */
+  font-size: 2.8rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 0.5rem;
@@ -696,10 +597,10 @@
 .projects-slider {
   position: relative;
   width: 100%;
-  max-width: 800px; /* smaller width */
+  max-width: 800px;
   margin: 0 auto;
   overflow: visible;
-  padding: 0 20px; /* reduced padding */
+  padding: 0 20px;
   box-sizing: border-box;
   transform: translateX(12%);
 }
@@ -746,7 +647,7 @@
 .project-image-wrapper {
   position: relative;
   width: 100%;
-  height: 220px; /* smaller image */
+  height: 220px;
   overflow: hidden;
   background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
 }
@@ -964,21 +865,79 @@
   color: #888888;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
+/* ==================== MOBILE RESPONSIVE STYLES ==================== */
+
+/* Tablets and Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+  /* Home Section */
+  .home-content {
+    padding: 1.5rem 0;
+  }
+
+  .main-hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-intro {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+  }
+
+  .companies-worked {
+    margin-top: 4rem;
+  }
+
+  /* Education Section */
+  .education-split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .education-heading {
+    font-size: 2.5rem;
+  }
+
+  .education-info-section {
+    grid-template-columns: 1fr;
+  }
+
+  /* Experience Section */
+  .experience-layout {
+    transform: none;
+  }
+
+  .experience-title {
+    font-size: 3rem;
+  }
+
+  .experience-card-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .duration-info {
+    text-align: left;
+  }
+
+  /* Projects Section */
+  .projects-layout {
+    transform: none;
+    padding: 0;
+  }
+
   .projects-slider {
-    max-width: 750px;
+    transform: none;
+    max-width: 90%;
+    margin: 0 auto;
     padding: 0 50px;
   }
 
-  .project-image-wrapper {
-    height: 280px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .projects-slider {
-    max-width: 650px;
+  .projects-title,
+  .projects-subtitle,
+  .slider-dots,
+  .project-counter {
+    transform: none;
   }
 
   .project-image-wrapper {
@@ -988,43 +947,232 @@
   .slider-arrow {
     width: 42px;
     height: 42px;
-    margin-left: 1rem;
   }
 }
 
+/* Mobile Devices (768px and below) */
 @media (max-width: 768px) {
-  .projects-title {
-    font-size: 2.5rem;
+  /* Home Section */
+  .home-content {
+    padding: 1rem 0;
   }
 
-  .projects-slider {
-    padding: 0 20px;
+  .home-text-section {
     max-width: 100%;
   }
 
-  .project-image-wrapper {
-    height: 220px;
+  .title-tags {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    font-size: 0.65rem;
   }
 
-  .project-info-wrapper {
+  .main-hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+
+  .companies-worked {
+    margin-top: 3rem;
+  }
+
+  .companies-logos {
+    gap: 1.5rem 2rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  /* Section Content */
+  .section-content {
+    padding: 1rem 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-text-box {
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-text-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .hero-text-box p {
+    font-size: 0.95rem;
+  }
+
+  /* Education Section */
+  .education-split {
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .education-heading {
+    font-size: 2rem;
+  }
+
+  .education-para {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .education-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .edu-btn-primary,
+  .edu-btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .education-img-wrapper {
+    border-radius: 16px;
+  }
+
+  .education-info-section {
+    gap: 1.25rem;
+  }
+
+  /* Experience Section */
+  .experience-title {
+    font-size: 1.85rem;
+  }
+
+  .resume-link-btn {
+    padding: 0.7rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .experience-card {
     padding: 1.5rem;
   }
 
+  .company-name {
+    font-size: 1.3rem;
+  }
+
+  .job-position {
+    font-size: 0.95rem;
+  }
+
+  .company-location,
+  .job-duration {
+    font-size: 0.85rem;
+  }
+
+  .responsibilities-list li {
+    font-size: 0.85rem;
+    padding-left: 1.25rem;
+  }
+
+  /* Projects Section */
+  .projects-title {
+    font-size: 1.85rem;
+  }
+
+  .projects-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .projects-slider {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .project-image-wrapper {
+    height: 180px;
+  }
+
+  .project-info-wrapper {
+    padding: 1rem;
+  }
+
+  .project-category {
+    font-size: 0.6rem;
+  }
+
   .project-title-large {
-    font-size: 1.4rem;
+    font-size: 1.15rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .tech-badge {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
   }
 
   .slider-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 1.2rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1.05rem;
   }
 
   .slider-arrow-left {
-    left: -5px;
+    left: -8px;
   }
 
   .slider-arrow-right {
-    right: -5px;
+    right: -8px;
+  }
+
+  .slider-dots {
+    gap: 0.4rem;
+  }
+
+  .slider-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .slider-dot.active {
+    width: 20px;
+  }
+
+  .project-counter {
+    font-size: 0.85rem;
+  }
+
+  .counter-current {
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+  .main-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-intro {
+    font-size: 0.9rem;
+  }
+
+  .education-heading,
+  .experience-title,
+  .projects-title {
+    font-size: 1.65rem;
+  }
+
+  .project-image-wrapper {
+    height: 160px;
   }
 }

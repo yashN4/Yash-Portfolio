@@ -4,7 +4,7 @@ import "./Sections.css";
 
 const Studies = () => {
   return (
-    <div className="home-content education-layout">
+    <div className=" education-layout">
       {/* headers */}
       <div className="Studies-headerr">
         <div className="header-left">

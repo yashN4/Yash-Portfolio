@@ -35,3 +35,16 @@ body {
   padding: 2rem;
   background-color: #0a0a0a;
 }
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .app-layout {
+    position: relative;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

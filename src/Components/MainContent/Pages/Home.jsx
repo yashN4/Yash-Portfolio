@@ -1,5 +1,6 @@
 import React from "react";
 import "./Sections.css";
+import ProjectCard from "../ProjectCard";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <ProjectCard />
     </div>
   );
 };
